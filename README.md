@@ -1,7 +1,5 @@
 # Pomodoro Timer App
 
-![Pomodoro Timer](public/pomodoro.png)
-
 **[Prova l'applicazione](https://fastidious-flan-edfaf6.netlify.app)**
 
 **Pomodoro Timer App** è un'applicazione basata su React che offre una soluzione efficace per gestire il tuo tempo in modo più produttivo utilizzando la tecnica Pomodoro. Questo timer suddivide il tuo lavoro in intervalli prestabiliti (di solito 25 minuti) seguiti da brevi pause, migliorando la tua concentrazione e la tua produttività.
