@@ -60,8 +60,8 @@ function TimerComponent() {
 
       <div className="timer-buttons">
         <button onClick={() => setTimer(25)}>Pomodoro (25 min)</button>
-        <button onClick={() => setTimer(5)}>Pausa breve (5 min)</button>
-        <button onClick={() => setTimer(15)}>Pausa lunga (15 min)</button>
+        <button onClick={() => setTimer(5)}>Short Break (5 min)</button>
+        <button onClick={() => setTimer(15)}>Long Break (15 min)</button>
       </div>
 
       <div className="timer">{formatTime(time)}</div>
