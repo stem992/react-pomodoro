@@ -6,8 +6,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; 
-  background-color: #d66464;
+  min-height: 100vh;
+  background-color: #f2b950; 
+  background-image: linear-gradient(45deg, #f2b950, #e55e5e); 
+  min-height: 100vh;
 }
 
 navbar {
@@ -15,55 +17,61 @@ navbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 28px;
   margin: 0;
   padding: 0;
+  color: #fff;
 }
 
 .separator {
-  margin: 0 10px; 
+  margin: 0 10px;
   border: none;
-  border-right: 1px solid #080808; 
-  height: 25px; 
+  border-right: 1px solid #fff;
+  height: 25px;
 }
 
 .settings-button {
   background-color: transparent;
   border: none;
-  color: #3498db; 
+  color: #fff;
   font-size: 24px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .timer {
-  font-size: 68px; 
+  font-size: 96px;
   font-weight: bold;
   margin: 20px 0;
-  border: 6px solid black;
+  border: 6px solid #fff;
   border-radius: 50%;
   padding: 30px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+  background-color: rgba(255, 255, 255, 0.1); 
 }
 
 .timer-buttons button {
-  background-color: #c57671; 
-  color: #fff; 
+  background-color: #e55e5e;
+  color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 12px;
-  margin: 5px;
+  padding: 15px 30px;
+  font-size: 16px;
+  margin: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
   text-transform: uppercase;
   font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
 }
 
 .timer-buttons button:hover {
-  background-color: #c44343; 
+  background-color: #f27575;
 }
 
 .settings-modal {
@@ -72,64 +80,70 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.8); 
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 1; 
+  z-index: 1;
 }
 
 .settings-modal h2 {
-  font-size: 15px;
+  font-size: 24px;
   display: flex;
   margin-right: 20px;
   text-transform: uppercase;
+  color: #fff;
 }
 
 .settings-modal input[type="number"] {
   width: 20%;
   padding: 10px;
   font-size: 18px;
-  border: 1px solid #ccc;
+  border: 2px solid #f2b950;
   border-radius: 5px;
   margin-bottom: 20px;
+  color: #333; 
 }
 
 .settings-modal .confirm-button,
 .settings-modal .close-button {
-  background-color: #3498db;
+  background-color: #f2b950;
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 15px 30px;
   font-size: 18px;
   margin-right: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
   display: flex;
-  
+  text-transform: uppercase;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
 }
 
 .settings-modal .confirm-button:hover,
 .settings-modal .close-button:hover {
-  background-color: #2980b9; 
+  background-color: #e55e5e;
 }
 
-
 .close-button {
-  background-color: #e74c3c;
-  color: #fff; 
+  background-color: #f27575;
+  color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 15px 30px;
   font-size: 18px;
   margin-top: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
   display: flex;
+  text-transform: uppercase;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
 }
 
 .close-button:hover {
-  background-color: #c0392b; 
+  background-color: #e55e5e;
 }
