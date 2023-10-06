@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay, faPause, faUndo, faGears } from '@fortawesome/free-solid-svg-icons';
 
 function TimerComponent() {
   const [time, setTime] = useState(1500);
   const [isRunning, setIsRunning] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [customTime, setCustomTime] = useState(25); 
+  const [selectedTimer, setSelectedTimer] = useState(25);
 
   useEffect(() => {
     let timer;
@@ -48,27 +51,43 @@ function TimerComponent() {
     setShowSettings(!showSettings);
   };
 
+  const handleTimerChange = (event) => {
+    const selectedValue = parseInt(event.target.value);
+    setTimer(selectedValue);
+    setSelectedTimer(selectedValue);
+  };
+
   return (
     <div className="timer-container">
       <navbar>
         <h1>Pomodoro Timer</h1>
-        <hr className="separator" />
-        <button className="settings-button" onClick={toggleSettings}>
-          ⚙️
-        </button>
       </navbar>
 
       <div className="timer-buttons">
-        <button onClick={() => setTimer(25)}>Pomodoro (25 min)</button>
-        <button onClick={() => setTimer(5)}>Short Break (5 min)</button>
-        <button onClick={() => setTimer(15)}>Long Break (15 min)</button>
+      <select value={selectedTimer} onChange={handleTimerChange}>
+          <option value={25}>Pomodoro (25 min)</option>
+          <option value={5}>Short Break (5 min)</option>
+          <option value={15}>Long Break (15 min)</option>
+        </select>
       </div>
 
       <div className="timer">{formatTime(time)}</div>
       <div className="timer-buttons">
-        <button onClick={startTimer}>Start</button>
-        <button onClick={pauseTimer}>Pause</button>
-        <button onClick={resetTimer}>Reset</button>
+      <button className="start-button" onClick={startTimer}>
+        <FontAwesomeIcon icon={faPlay} /> 
+      </button>
+
+      <button className="pause-button" onClick={pauseTimer}>
+        <FontAwesomeIcon icon={faPause} /> 
+      </button>
+
+      <button className="reset-button" onClick={resetTimer}>
+        <FontAwesomeIcon icon={faUndo} /> 
+      </button>
+      <button className="settings-button" onClick={toggleSettings}>
+      <FontAwesomeIcon icon={faGears} /> 
+      </button>
+
       </div>
 
       {showSettings && (

@@ -1,4 +1,5 @@
-/* CSS LAYOUT */
+body {
+  
 
 .timer-container {
   text-align: center;
@@ -7,8 +8,9 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #f2b950; 
-  background-image: linear-gradient(45deg, #f2b950, #e55e5e); 
+
+  background-image: linear-gradient(90deg, rgba(180,103,58,0.3169642857142857) 0%, rgba(238,35,35,1) 40%, rgba(253,29,29,1) 50%, rgba(253,32,30,1) 51%, rgba(252,176,69,1) 100%);
+}
   min-height: 100vh;
 }
 
@@ -21,17 +23,11 @@ navbar {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 35px;
   margin: 0;
   padding: 0;
   color: #fff;
-}
-
-.separator {
-  margin: 0 10px;
-  border: none;
-  border-right: 1px solid #fff;
-  height: 25px;
+  text-transform: uppercase;
 }
 
 .settings-button {
@@ -47,12 +43,12 @@ h1 {
   font-size: 96px;
   font-weight: bold;
   margin: 20px 0;
-  border: 6px solid #fff;
+
   border-radius: 50%;
   padding: 30px;
   color: #fff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
-  background-color: rgba(255, 255, 255, 0.1); 
+
 }
 
 .timer-buttons button {
@@ -66,7 +62,7 @@ h1 {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
   text-transform: uppercase;
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
 }
 
@@ -147,3 +143,78 @@ h1 {
 .close-button:hover {
   background-color: #e55e5e;
 }
+
+button.start-button {
+  background-color: #007bff; 
+}
+
+button.pause-button {
+  background-color: #ffc107; 
+}
+
+button.reset-button {
+  background-color: #f44336; 
+}
+
+button.settings-button {
+  background-color: #333;
+  cursor: pointer;
+}
+
+button.confirm-button {
+  background-color: #4caf50; 
+}
+
+button.close-button {
+  background-color: #f44336; 
+}
+
+
+@media screen and (max-width: 576px) {
+  .timer-container {
+    padding: 20px; 
+  }
+
+  .timer {
+    font-size: 64px; 
+    padding: 20px; 
+  }
+
+  .timer-buttons {
+    flex-direction: column;
+  }
+
+  .timer-buttons button {
+    width: 100%;
+  }
+
+  .settings-modal h2 {
+    font-size: 20px; 
+    margin-right: 0; 
+  }
+
+  .settings-modal input[type="number"] {
+    width: 80%;
+  }
+
+  .settings-modal .confirm-button,
+  .settings-modal .close-button,
+  .close-button {
+    font-size: 16px; 
+    padding: 10px 20px; 
+  }
+  
+}
+
+.timer-buttons select {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+  width: 200px; 
+  cursor: pointer;
+}
+
