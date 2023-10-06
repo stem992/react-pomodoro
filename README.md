@@ -1,4 +1,4 @@
-# Pomodoro Timer App
+# Pomodoro Timer
 
 **[Prova l'applicazione](https://fastidious-flan-edfaf6.netlify.app)**
 
